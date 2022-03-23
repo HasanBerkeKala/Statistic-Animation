@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #container{
+            position:relative;
+            width:1200px;
+            height: 175px;
+            border:1px solid black;
+            margin:0 auto;
+        }
+        #alan{
+            width:100%;
+            height:219px;
+            margin:0 auto;
+            text-align:center;
+        }
+        #tableHeader{
+            width:1200px;
+            height:30px;
+            padding-top:10px;
+            margin:0 auto;
+            text-align:center;
+            background-color:#F1F1F1;
+            border:1px solid black;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="alan">
+        <div id="tableHeader">Personel Başarı Yüzdesi</div>
+        <div id="container">
+            <div id="firstName" style="width:195px; height:25px; float:left; text-align:left; padding-top:5px; padding-left:5px;">Hasan Berke Kala</div>
+            <div id="graphic1" style="width:0px; height:20px; float:left; margin: 5px 0;"><div id="percentage" style="padding-top:3px; text-align:right; font-size:14px;"></div></div>
+
+            <br /><br />
+
+            <div id="secondName" style="width:195px; height:25px; float:left; text-align:left; padding-top:5px; padding-left:5px;">Elif Berfin Kala</div>
+            <div id="graphic2" style="width:0px; height:20px; float:left; margin: 5px 0;"><div id="percentage2" style="padding-top:3px; text-align:right; font-size:14px;"></div></div>
+
+            <br /><br />
+
+            <div id="thirdName" style="width:195px; height:25px; float:left; text-align:left; padding-top:5px; padding-left:5px;">Cemal Kala</div>
+            <div id="graphic3" style="width:0px; height:20px; float:left; margin: 5px 0;"><div id="percentage3" style="padding-top:3px; text-align:right; font-size:14px;"></div></div>
+
+            <br /><br />
+
+            <div id="fourthName" style="width:195px; height:25px; float:left; text-align:left; padding-top:5px; padding-left:5px;">Ece Ekin Kala</div>
+            <div id="graphic4" style="width:0px; height:20px; float:left; margin: 5px 0;"><div id="percentage4" style="padding-top:3px; text-align:right; font-size:14px;"></div></div>
+
+            <br /><br />
+
+            <div id="fifthName" style="width:195px; height:25px; float:left; text-align:left; padding-top:5px; padding-left:5px;">Cem Kala</div>
+            <div id="graphic5" style="width:0px; height:20px; float:left; margin: 5px 0;"><div id="percentage5" style="padding-top:3px; text-align:right; font-size:14px;"></div></div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" language="javascript">
+        var wholeArea = 1000;
+
+        var graphic1Area = document.getElementById('graphic1');
+        var percentage1 = 49;
+        var calculate1 = 100 / percentage1;
+        var pixel1 = wholeArea / calculate1;
+        var start1 = 0;
+
+        var time1 = setInterval(function () {
+            if (percentage1 < 50) {
+                document.getElementById('graphic1').style.backgroundColor = "#F0EB5D";
+            } else {
+                document.getElementById('graphic1').style.backgroundColor = "#467CD9";
+            }
+            
+            
+            document.getElementById('graphic1').style.width = start1 + "px";
+            start1 = start1 + 1;
+            if (start1 >= pixel1) {
+                if (percentage1 < 50) {
+                    document.getElementById('graphic1').style.color = "#467CD9";
+                } else {
+                    document.getElementById('graphic1').style.color = "#F0EB5D";
+                }
+                document.getElementById('percentage').innerHTML = "%" + percentage1 + "&nbsp";
+                clearInterval(time1);
+            }
+        }, 1)
+
+        var graphic2Area = document.getElementById('graphic2');
+        var percentage2 = 60;
+        var calculate2 = 100 / percentage2;
+        var pixel2 = wholeArea / calculate2;
+        var start2 = 0;
+
+        var time2 = setInterval(function () {
+            if (percentage2 < 50) {
+                document.getElementById('graphic2').style.backgroundColor = "#F0EB5D";
+            } else {
+                document.getElementById('graphic2').style.backgroundColor = "#467CD9";
+            }
+            document.getElementById('graphic2').style.width = start2 + "px";
+            start2 = start2 + 1;
+            if (start2 >= pixel2) {
+                if (percentage2 < 50) {
+                    document.getElementById('graphic2').style.color = "#467CD9";
+                } else {
+                    document.getElementById('graphic2').style.color = "#F0EB5D";
+                }
+                document.getElementById('percentage2').innerHTML = "%" + percentage2 + "&nbsp";
+                clearInterval(time2);
+            }
+        }, 1)
+
+        var graphic3Area = document.getElementById('graphic3');
+        var percentage3 = 72;
+        var calculate3 = 100 / percentage3;
+        var pixel3 = wholeArea / calculate3;
+        var start3 = 0;
+
+        var time3 = setInterval(function () {
+            if (percentage3 < 50) {
+                document.getElementById('graphic3').style.backgroundColor = "#F0EB5D";
+            } else {
+                document.getElementById('graphic3').style.backgroundColor = "#467CD9";
+            }
+            document.getElementById('graphic3').style.width = start3 + "px";
+            start3 = start3 + 1;
+            if (start3 >= pixel3) {
+                if (percentage3 < 50) {
+                    document.getElementById('graphic3').style.color = "#467CD9";
+                } else {
+                    document.getElementById('graphic3').style.color = "#F0EB5D";
+                }
+                document.getElementById('percentage3').innerHTML = "%" + percentage3 + "&nbsp";
+                clearInterval(time3);
+            }
+        }, 1)
+
+        var graphic4Area = document.getElementById('graphic4');
+        var percentage4 = 98;
+        var calculate4 = 100 / percentage4;
+        var pixel4 = wholeArea / calculate4;
+        var start4 = 0;
+
+        var time4 = setInterval(function () {
+            if (percentage4 < 50) {
+                document.getElementById('graphic4').style.backgroundColor = "#F0EB5D";
+            } else {
+                document.getElementById('graphic4').style.backgroundColor = "#467CD9";
+            }
+            document.getElementById('graphic4').style.width = start4 + "px";
+            start4 = start4 + 1;
+            if (start4 >= pixel4) {
+                if (percentage4 < 50) {
+                    document.getElementById('graphic4').style.color = "#467CD9";
+                } else {
+                    document.getElementById('graphic4').style.color = "#F0EB5D";
+                }
+                document.getElementById('percentage4').innerHTML = "%" + percentage4 + "&nbsp";
+                clearInterval(time4);
+            }
+        }, 1)
+
+        var graphic5Area = document.getElementById('graphic5');
+        var percentage5 = 35;
+        var calculate5 = 100 / percentage5;
+        var pixel5 = wholeArea / calculate5;
+        var start5 = 0;
+
+        var time5 = setInterval(function () {
+            if (percentage5 < 50) {
+                document.getElementById('graphic5').style.backgroundColor = "#F0EB5D";
+            } else {
+                document.getElementById('graphic5').style.backgroundColor = "#467CD9";
+            }
+            document.getElementById('graphic5').style.width = start5 + "px";
+            start5 = start5 + 1;
+            if (start5 >= pixel5) {
+                if (percentage5 < 50) {
+                    document.getElementById('graphic5').style.color = "#467CD9";
+                } else {
+                    document.getElementById('graphic5').style.color = "#F0EB5D";
+                }
+                document.getElementById('percentage5').innerHTML = "%" + percentage5 + "&nbsp";
+                clearInterval(time5);
+            }
+        }, 1)
+    </script>
+</body>
+</html>
